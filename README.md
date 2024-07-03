@@ -1,10 +1,10 @@
-# DNS Resolver
+# Resolver
 
-A high-performance, concurrent DNS resolver tool written in Go. This tool efficiently resolves domain names to IP addresses, handling various URL formats and providing flexible output options.
+A high-performance, concurrent domain name resolver tool written in Go. This tool efficiently resolves domain names to IP addresses, handling various URL formats and providing flexible output options.
 
 ## Features
 
-- Concurrent DNS resolution for high performance
+- Concurrent resolution for high performance
 - Handles various URL formats (with or without http/https, www prefix, etc.)
 - Two output formats: IP-only (default) and domain-IP mapping
 - Removes duplicate IPs in the default output mode
@@ -18,7 +18,7 @@ A high-performance, concurrent DNS resolver tool written in Go. This tool effici
 2. Clone this repository:
    ```
    git clone https://github.com/harshinsecurity/resolver.git
-   cd resolver
+   cd concurrent-resolver
    ```
 
 3. Build the tool:
