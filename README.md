@@ -17,20 +17,20 @@ A high-performance, concurrent DNS resolver tool written in Go. This tool effici
 
 2. Clone this repository:
    ```
-   git clone https://github.com/yourusername/concurrent-dns-resolver.git
-   cd concurrent-dns-resolver
+   git clone https://github.com/harshinsecurity/resolver.git
+   cd resolver
    ```
 
 3. Build the tool:
    ```
-   go build dns_resolver.go
+   go build resolver.go
    ```
 
 ## Usage
 
 Basic usage:
 ```
-./dns_resolver
+./resolver
 ```
 
 This will use default settings: reading from `urls.txt`, writing to `resolved_ips.txt`, using 100 concurrent workers, and outputting unique IPs only.
@@ -47,22 +47,22 @@ This will use default settings: reading from `urls.txt`, writing to `resolved_ip
 
 1. Use custom input and output files:
    ```
-   ./dns_resolver -input=my_domains.txt -output=results.txt
+   ./resolver -input=my_domains.txt -output=results.txt
    ```
 
 2. Increase concurrency to 200 workers:
    ```
-   ./dns_resolver -concurrency=200
+   ./resolver -concurrency=200
    ```
 
 3. Output domain-IP mappings instead of just IPs:
    ```
-   ./dns_resolver -format=domain-ip
+   ./resolver -format=domain-ip
    ```
 
 4. Combine multiple options:
    ```
-   ./dns_resolver -input=sites.txt -output=ips.txt -concurrency=150 -format=domain-ip
+   ./resolver -input=sites.txt -output=ips.txt -concurrency=150 -format=domain-ip
    ```
 
 ## Input File Format
