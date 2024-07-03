@@ -15,22 +15,18 @@ A high-performance, concurrent domain name resolver tool written in Go. This too
 
 1. Ensure you have Go installed on your system. If not, download and install it from [golang.org](https://golang.org/).
 
-2. Clone this repository:
+2. Install the resolver tool using the following command:
    ```
-   git clone https://github.com/harshinsecurity/resolver.git
-   cd concurrent-resolver
+   go install github.com/harshinsecurity/resolver@latest
    ```
 
-3. Build the tool:
-   ```
-   go build resolver.go
-   ```
+3. Make sure your Go bin directory is in your system's PATH.
 
 ## Usage
 
 Basic usage:
 ```
-./resolver
+resolver
 ```
 
 This will use default settings: reading from `urls.txt`, writing to `resolved_ips.txt`, using 100 concurrent workers, and outputting unique IPs only.
@@ -47,22 +43,22 @@ This will use default settings: reading from `urls.txt`, writing to `resolved_ip
 
 1. Use custom input and output files:
    ```
-   ./resolver -input=my_domains.txt -output=results.txt
+   resolver -input=my_domains.txt -output=results.txt
    ```
 
 2. Increase concurrency to 200 workers:
    ```
-   ./resolver -concurrency=200
+   resolver -concurrency=200
    ```
 
 3. Output domain-IP mappings instead of just IPs:
    ```
-   ./resolver -format=domain-ip
+   resolver -format=domain-ip
    ```
 
 4. Combine multiple options:
    ```
-   ./resolver -input=sites.txt -output=ips.txt -concurrency=150 -format=domain-ip
+   resolver -input=sites.txt -output=ips.txt -concurrency=150 -format=domain-ip
    ```
 
 ## Input File Format
@@ -86,6 +82,16 @@ https://subdomain.example.com/path
 2. Domain-IP mapping:
    - Outputs "domain,ip" for resolved domains
    - Outputs "domain,Could not resolve" for unresolved domains
+
+## Development
+
+If you want to contribute or modify the tool, you can clone the repository and build it locally:
+
+```
+git clone https://github.com/yourusername/concurrent-resolver.git
+cd concurrent-resolver
+go build
+```
 
 ## Contributing
 
