@@ -88,8 +88,8 @@ https://subdomain.example.com/path
 If you want to contribute or modify the tool, you can clone the repository and build it locally:
 
 ```
-git clone https://github.com/yourusername/concurrent-resolver.git
-cd concurrent-resolver
+git clone https://github.com/harshinsecurity/resolver.git
+cd resolver
 go build
 ```
 
