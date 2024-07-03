@@ -58,17 +58,17 @@ func main() {
 	helpFlag := flag.Bool("help", false, "Display help information")
 
 	flag.Usage = func() {
-		fmt.Fprintf(os.Stderr, "DNS Resolver Tool\n\n")
+		fmt.Fprintf(os.Stderr, "Concurrent Resolver Tool\n\n")
 		fmt.Fprintf(os.Stderr, "This tool concurrently resolves domain names to IP addresses. It can handle various URL formats and extracts the domain for resolution.\n\n")
-		fmt.Fprintf(os.Stderr, "Usage: %s [options]\n\n", os.Args[0])
+		fmt.Fprintf(os.Stderr, "Usage: resolver [options]\n\n")
 		fmt.Fprintf(os.Stderr, "Options:\n")
 		flag.PrintDefaults()
 		fmt.Fprintf(os.Stderr, "\nOutput Formats:\n")
 		fmt.Fprintf(os.Stderr, "  ip: Only outputs unique, successfully resolved IP addresses (default)\n")
 		fmt.Fprintf(os.Stderr, "  domain-ip: Outputs 'domain,ip' for resolved domains and 'domain,Could not resolve' for failures\n")
 		fmt.Fprintf(os.Stderr, "\nExamples:\n")
-		fmt.Fprintf(os.Stderr, "  %s\n", os.Args[0])
-		fmt.Fprintf(os.Stderr, "  %s -input=my_domains.txt -output=results.txt -concurrency=200 -format=domain-ip\n", os.Args[0])
+		fmt.Fprintf(os.Stderr, "  resolver\n")
+		fmt.Fprintf(os.Stderr, "  resolver -input=my_domains.txt -output=results.txt -concurrency=200 -format=domain-ip\n")
 	}
 
 	flag.Parse()
